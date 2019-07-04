@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>VMware Linux 虚拟机联网网卡配置 | Zero的萝卜坑</title>
+  <title>Docker安装 | Zero的萝卜坑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤 修改vmware中网卡配置 设置 –&amp;gt; 网络适配器 –&amp;gt; 网络连接 –&amp;gt; 自定义 –&amp;gt; 指定NAT模式">
-<meta name="keywords" content="Linux">
+  <meta name="description" content="Centos 7 安装步骤 安装需要的软件包 yum install -y yum-utils 配置官方yum源 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo 安装docker-ce yum install -y docker-ce">
+<meta name="keywords" content="docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VMware Linux 虚拟机联网网卡配置">
-<meta property="og:url" content="http://yoursite.com/2019/07/04/VMware-Linux-虚拟机联网网卡配置-1/index.html">
+<meta property="og:title" content="Docker安装">
+<meta property="og:url" content="http://yoursite.com/2019/07/04/Docker安装/index.html">
 <meta property="og:site_name" content="Zero的萝卜坑">
-<meta property="og:description" content="在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤 修改vmware中网卡配置 设置 –&amp;gt; 网络适配器 –&amp;gt; 网络连接 –&amp;gt; 自定义 –&amp;gt; 指定NAT模式">
+<meta property="og:description" content="Centos 7 安装步骤 安装需要的软件包 yum install -y yum-utils 配置官方yum源 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo 安装docker-ce yum install -y docker-ce">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://pty801b9s.bkt.clouddn.com/1562227990245p8kxr9zq.png?imageslim">
-<meta property="og:image" content="http://pty801b9s.bkt.clouddn.com/156222790659122k6iq3q.png?imageslim">
-<meta property="og:image" content="http://pty801b9s.bkt.clouddn.com/1562227945211yu5hn1bv.png?imageslim">
-<meta property="og:updated_time" content="2019-07-04T09:47:38.967Z">
+<meta property="og:updated_time" content="2019-07-04T09:47:25.646Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VMware Linux 虚拟机联网网卡配置">
-<meta name="twitter:description" content="在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤 修改vmware中网卡配置 设置 –&amp;gt; 网络适配器 –&amp;gt; 网络连接 –&amp;gt; 自定义 –&amp;gt; 指定NAT模式">
-<meta name="twitter:image" content="http://pty801b9s.bkt.clouddn.com/1562227990245p8kxr9zq.png?imageslim">
+<meta name="twitter:title" content="Docker安装">
+<meta name="twitter:description" content="Centos 7 安装步骤 安装需要的软件包 yum install -y yum-utils 配置官方yum源 yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo 安装docker-ce yum install -y docker-ce">
   
   
     <link rel="icon" href="http://pty801b9s.bkt.clouddn.com/blog/favicon.png">
@@ -151,45 +147,46 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-VMware-Linux-虚拟机联网网卡配置-1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Docker安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      VMware Linux 虚拟机联网网卡配置
+      Docker安装
     </h1>
   
 
         
-        <a href="/2019/07/04/VMware-Linux-虚拟机联网网卡配置-1/" class="archive-article-date">
-  	<time datetime="2019-07-04T08:02:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-04</time>
+        <a href="/2019/07/04/Docker安装/" class="archive-article-date">
+  	<time datetime="2019-07-04T09:42:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤"><a href="#在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤" class="headerlink" title="在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤"></a>在VMware中配置好的Linux虚机需要联网或使用ssh工具连接，以下为网卡配置步骤</h5><ol>
-<li>修改vmware中网卡配置</li>
-<li>设置 –&gt; 网络适配器 –&gt; 网络连接 –&gt; 自定义 –&gt; 指定NAT模式</li>
+        <h3 id="Centos-7-安装步骤"><a href="#Centos-7-安装步骤" class="headerlink" title="Centos 7 安装步骤"></a>Centos 7 安装步骤</h3><ol>
+<li>安装需要的软件包</li>
+<li><code>yum install -y yum-utils</code></li>
+<li>配置官方yum源</li>
+<li><code>yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</code></li>
+<li>安装docker-ce</li>
+<li><code>yum install -y docker-ce</code></li>
 </ol>
 <a id="more"></a>
-<ol>
-<li><img src="http://pty801b9s.bkt.clouddn.com/1562227990245p8kxr9zq.png?imageslim" alt="paste image"></li>
-<li>登录虚拟机</li>
-<li>查看网卡信息，找到网卡名</li>
-<li><code>ip a</code></li>
-<li><img src="http://pty801b9s.bkt.clouddn.com/156222790659122k6iq3q.png?imageslim" alt="paste image"></li>
-<li><code>vi /etc/sysconfig/network-scripts/ifcfg-ens33  # 以ens33为例</code></li>
-<li>修改 ONBOOT=yes（vi编辑器中，按i键修改，按esc退出修改模式）</li>
-<li><img src="http://pty801b9s.bkt.clouddn.com/1562227945211yu5hn1bv.png?imageslim" alt="paste image"></li>
-<li>:wq 保存退出</li>
-<li><code>service network restart  # 重启网络服务</code></li>
-<li><code>ping www.baidu.com  # 检查网络连接</code></li>
+<ol start="4">
+<li>验证安装是否成功</li>
+<li><code>docker version</code></li>
+<li>启动docker服务</li>
+<li><code>systemctl start docker</code></li>
+<li>加入启动项</li>
+<li><code>systemctl enable docker</code></li>
+<li>设置时区为上海</li>
+<li><code>cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code><h4 id="至此Docker环境安装完成，是不是超简单的呢"><a href="#至此Docker环境安装完成，是不是超简单的呢" class="headerlink" title="至此Docker环境安装完成，是不是超简单的呢"></a>至此Docker环境安装完成，是不是超简单的呢</h4></li>
 </ol>
-<h5 id="VMware-Linux-虚拟机联网网卡配置完成"><a href="#VMware-Linux-虚拟机联网网卡配置完成" class="headerlink" title="VMware Linux 虚拟机联网网卡配置完成"></a>VMware Linux 虚拟机联网网卡配置完成</h5>
+
       
 
       
@@ -233,7 +230,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
         		</li>
       		
 		</ul>
@@ -300,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/04/VMware-Linux-虚拟机联网网卡配置-1/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/04/Docker安装/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -314,18 +311,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/04/Docker安装/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Docker安装
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/01/我的第一篇博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">我的第一篇博客</div>
+    <a href="/2019/07/04/VMware-Linux-虚拟机联网网卡配置-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VMware Linux 虚拟机联网网卡配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
