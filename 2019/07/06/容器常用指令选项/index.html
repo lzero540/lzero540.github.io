@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>容器run命令选项 | Zero的萝卜坑</title>
+  <title>容器常用命令 | Zero的萝卜坑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="run命令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="容器run命令选项">
+<meta property="og:title" content="容器常用命令">
 <meta property="og:url" content="http://yoursite.com/2019/07/06/容器常用指令选项/index.html">
 <meta property="og:site_name" content="Zero的萝卜坑">
 <meta property="og:description" content="run命令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-06T08:35:55.654Z">
+<meta property="og:updated_time" content="2019-07-06T09:05:19.797Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="容器run命令选项">
+<meta name="twitter:title" content="容器常用命令">
 <meta name="twitter:description" content="run命令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
   
   
@@ -154,7 +154,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      容器run命令选项
+      容器常用命令
     </h1>
   
 
@@ -167,7 +167,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="run命令"><a href="#run命令" class="headerlink" title="run命令"></a>run命令</h4><p><code>docker container run -itd --name ng nginx</code></p>
+        <h3 id="run命令"><a href="#run命令" class="headerlink" title="run命令"></a>run命令</h3><p><code>docker container run -itd --name ng nginx</code></p>
 <ul>
 <li>-i<br>交互式</li>
 <li>-t<br>分配一个伪终端</li>
@@ -199,7 +199,7 @@
 <li>–restart=always<br>容器退出时始终重启</li>
 <li>–add-host list<br>添加其他主机到容器的hosts中</li>
 </ul>
-<h4 id="资源限制指令"><a href="#资源限制指令" class="headerlink" title="资源限制指令"></a>资源限制指令</h4><ul>
+<h5 id="资源限制指令"><a href="#资源限制指令" class="headerlink" title="资源限制指令"></a>资源限制指令</h5><ul>
 <li>cpu<ul>
 <li>–cpus<ul>
 <li>设置cpu数量</li>
@@ -241,6 +241,21 @@
 </ol>
 </li>
 </ul>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><p>ctrl+p+q<br>不中断容器退出</p>
+<p><code>docker exec -it ng bash</code><br>命令方式进入一个容器<br>docker exec ng ls /etc</p>
+<p><code>docker container start ng</code><br>启动一个容器</p>
+<p><code>docker logs nginx01</code><br>输出容器控制台log<br>log宿主机位置：/var/lib/docker/containers/</p>
+<p><code>docker container stats ng</code><br>查看容器资源状态</p>
+<p><code>docker container ls</code><br>查看运行的容器</p>
+<p><code>docker container inspect ng</code><br>查看详细信息</p>
+<p><code>docker top ng</code><br>查看ng容器的进程</p>
+<p><code>docker commit</code><br>通过一个镜像创建一个容器</p>
+<p><code>docker container cp</code><br>复制一个文件到容器中<br>docker container cp 111.txt ng:/root<br>docker container cp ng:/opt/111.txt /root</p>
+<p><code>docker restart ng</code><br>重启ng容器</p>
+<p><code>docker port ng</code><br>查看容器端口映射</p>
+<p><code>docker update</code><br>更改容器资源限制</p>
+<p><code>docker stop</code><br>停止容器</p>
+<p><code>docker rm</code><br>删除容器</p>
 
       
 
@@ -368,7 +383,7 @@
   
   
     <a href="/2019/07/05/镜像常用管理命令/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">镜像常用管理命令</div>
+      <div class="article-nav-title">镜像常用命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
