@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Zero的萝卜坑">
 <meta property="og:description" content="run命令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-06T09:05:19.797Z">
+<meta property="og:updated_time" content="2019-07-06T11:06:38.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容器常用命令">
 <meta name="twitter:description" content="run命令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
@@ -247,6 +247,8 @@
 <p><code>docker logs nginx01</code><br>输出容器控制台log<br>log宿主机位置：/var/lib/docker/containers/</p>
 <p><code>docker container stats ng</code><br>查看容器资源状态</p>
 <p><code>docker container ls</code><br>查看运行的容器</p>
+<p><code>docker ps</code><br>查看当前运行容器<br>-a 显示所有包含停止的容器<br>-q 只显示容器ID</p>
+<p><code>docker export 1ce01a759c9c &gt; /opt/nginx.tar</code><br>根据容器id导出一个容器</p>
 <p><code>docker container inspect ng</code><br>查看详细信息</p>
 <p><code>docker top ng</code><br>查看ng容器的进程</p>
 <p><code>docker commit</code><br>通过一个镜像创建一个容器</p>

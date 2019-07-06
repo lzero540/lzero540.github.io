@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Zero的萝卜坑">
 <meta property="og:description" content="docker images查看docker信息 docker image ls查看docker信息 docker image history查看docker信息">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-06T09:03:15.809Z">
+<meta property="og:updated_time" content="2019-07-06T11:04:40.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="镜像常用命令">
 <meta name="twitter:description" content="docker images查看docker信息 docker image ls查看docker信息 docker image history查看docker信息">
@@ -177,9 +177,6 @@
 <p><code>docker save nginx:1.12 &gt; /opt/nginx1.12.tar</code><br>将镜像归档到一个文件中</p>
 <p><code>docker load &lt; /opt/nginx1.12.tar</code><br>镜像归档文件载入</p>
 <p><code>docker image rm nginx:v1</code><br>删除nginx:v1镜像<br><code>docker image rm af383d1ba079</code></p>
-<p><code>docker ps</code><br>查看当前运行容器<br>-a 显示所有包含停止的容器</p>
-<p><code>docker run -itd nginx</code><br>运行一个nginx容器</p>
-<p><code>docker export 1ce01a759c9c &gt; /opt/nginx.tar</code><br>根据容器id导出一个容器</p>
 <p><code>docker import /opt/nginx.tar nginx:v2</code><br>导入一个容器,并命名nginx，标记v2</p>
 
       
