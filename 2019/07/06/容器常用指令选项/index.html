@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Docker镜像管理 | Zero的萝卜坑</title>
+  <title>容器常用指令选项 | Zero的萝卜坑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="镜像介绍 不包含Linux内核的精简Linux系统 官方镜像源  https://hub.docker.com/explore 建议修改国内镜像仓库：">
+  <meta name="description" content="指令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker镜像管理">
-<meta property="og:url" content="http://yoursite.com/2019/07/05/Untitled/index.html">
+<meta property="og:title" content="容器常用指令选项">
+<meta property="og:url" content="http://yoursite.com/2019/07/06/容器常用指令选项/index.html">
 <meta property="og:site_name" content="Zero的萝卜坑">
-<meta property="og:description" content="镜像介绍 不包含Linux内核的精简Linux系统 官方镜像源  https://hub.docker.com/explore 建议修改国内镜像仓库：">
+<meta property="og:description" content="指令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://pty801b9s.bkt.clouddn.com/1562292501242tjdo5ots.png?imageslim">
-<meta property="og:updated_time" content="2019-07-05T04:14:15.476Z">
+<meta property="og:updated_time" content="2019-07-06T08:25:27.080Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker镜像管理">
-<meta name="twitter:description" content="镜像介绍 不包含Linux内核的精简Linux系统 官方镜像源  https://hub.docker.com/explore 建议修改国内镜像仓库：">
-<meta name="twitter:image" content="http://pty801b9s.bkt.clouddn.com/1562292501242tjdo5ots.png?imageslim">
+<meta name="twitter:title" content="容器常用指令选项">
+<meta name="twitter:description" content="指令docker container run -itd --name ng nginx  -i交互式 -t分配一个伪终端 -d后台运行">
   
   
     <link rel="icon" href="http://pty801b9s.bkt.clouddn.com/blog/favicon.png">
@@ -149,62 +147,100 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Untitled" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-容器常用指令选项" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Docker镜像管理
+      容器常用指令选项
     </h1>
   
 
         
-        <a href="/2019/07/05/Untitled/" class="archive-article-date">
-  	<time datetime="2019-07-05T02:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-05</time>
+        <a href="/2019/07/06/容器常用指令选项/" class="archive-article-date">
+  	<time datetime="2019-07-06T08:03:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="镜像介绍"><a href="#镜像介绍" class="headerlink" title="镜像介绍"></a>镜像介绍</h3><ol>
-<li>不包含Linux内核的精简Linux系统</li>
-<li>官方镜像源  <a href="https://hub.docker.com/explore" target="_blank" rel="noopener">https://hub.docker.com/explore</a></li>
-<li>建议修改国内镜像仓库：</li>
-</ol>
+        <h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><p><code>docker container run -itd --name ng nginx</code></p>
+<ul>
+<li>-i<br>交互式</li>
+<li>-t<br>分配一个伪终端</li>
+<li>-d<br>后台运行</li>
+</ul>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/docker/daemon.json</span><br><span class="line">&#123;</span><br><span class="line"> &quot;registry-mirrors&quot;: [&quot;https://registry.docker-cn.com&quot;]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>修改完成后下载一个nginx 1.12版本的镜像试试</li>
-<li><code>docker pull nginx:1.12</code></li>
-<li>下载成功后查看结果</li>
-<li><code>docker images</code><br><img src="http://pty801b9s.bkt.clouddn.com/1562292501242tjdo5ots.png?imageslim" alt="paste image"></li>
+<ul>
+<li>-a<br>附加到运行的容器</li>
+<li>-e<ul>
+<li>传入变量</li>
+<li>docker exec -it -e a=123 ng1 bash</li>
+</ul>
+</li>
+<li>-p<ul>
+<li>暴露端口到宿主机</li>
+<li>docker container run -itd -p 8080:80 –name nginx01 nginx</li>
+</ul>
+</li>
+<li>-h<br>指定主机名</li>
+<li>–ip string<ul>
+<li>指定ip</li>
+<li>用于自定义网络</li>
+</ul>
+</li>
+<li>–link list<br>链接到另一个容器</li>
+<li>–network<br>链接到一个网络</li>
+<li>–mount mount<br>挂载宿主机分区</li>
+<li>-v<br>挂载宿主机目录</li>
+<li>–restart=always<br>容器退出时始终重启</li>
+<li>–add-host list<br>添加其他主机到容器的hosts中</li>
+</ul>
+<h4 id="资源限制指令"><a href="#资源限制指令" class="headerlink" title="资源限制指令"></a>资源限制指令</h4><ul>
+<li>cpu<ul>
+<li>–cpus<ul>
+<li>设置cpu数量</li>
+<li>–cpus 1</li>
+</ul>
+</li>
+<li>–cpuset-cpus<ol>
+<li>指定cpu</li>
 </ol>
-<h3 id="镜像管理"><a href="#镜像管理" class="headerlink" title="镜像管理"></a>镜像管理</h3><h5 id="存储驱动"><a href="#存储驱动" class="headerlink" title="存储驱动"></a>存储驱动</h5><ol>
-<li>aufs ubuntu</li>
-<li>devcemapper centos</li>
-<li>overlay、overlay2 ubuntu<ol>
-<li>性能相对最好</li>
-<li>只支持ext4、xfs文件系统</li>
+</li>
+</ul>
+<ol start="3">
+<li>–cpu-shares<ol>
+<li>比例权重</li>
 </ol>
 </li>
 </ol>
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><p><code>docker images</code><br>查看docker信息</p>
-<p><code>docker image ls</code><br>查看docker信息</p>
-<p><code>docker image history</code><br>查看docker信息</p>
-<p><code>docker pull nginx:1.12</code><br>拉取一个Nginx1.12版本镜像</p>
-<p><code>docker image inspect nginx:1.12</code><br>查看镜像详细信息</p>
-<p><code>docker tag nginx:1.12 nginx:v1</code><br>给nginx1.12镜像重新打个标记</p>
-<p><code>docker save nginx:1.12 &gt; /opt/nginx1.12.tar</code><br>将镜像归档到一个文件中</p>
-<p><code>docker load &lt; /opt/nginx1.12.tar</code><br>镜像归档文件载入</p>
-<p><code>docker image rm nginx:v1</code><br>删除nginx:v1镜像<br><code>docker image rm af383d1ba079</code></p>
-<p><code>docker ps</code><br>查看当前运行容器</p>
-<p><code>docker run -itd nginx</code><br>运行一个nginx容器</p>
-<p><code>docker export 1ce01a759c9c &gt; /opt/nginx.tar</code><br>根据容器id导出一个容器</p>
-<p><code>docker import /opt/nginx.tar nginx:v2</code><br>导入一个容器,并命名nginx，标记v2</p>
+</li>
+<li>memory<ul>
+<li>-m, –memory<ol>
+<li>限制最大内存</li>
+<li>–memory 512m</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li>–memory-swap<ol>
+<li>限制磁盘交换分区</li>
+</ol>
+</li>
+<li>–memory-swappiness=&lt;0-100&gt;<ol>
+<li>限制磁盘交换分区百分比，默认为-1</li>
+</ol>
+</li>
+<li>–oom-kill-disable<ol>
+<li>内存不足时，内核会杀掉容器中的进程，建议先限制内存，再禁用oom</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
 
       
 
@@ -261,7 +297,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        			<a href="/categories/命令//" class="article-tag-list-link color3">命令</a>
         		</li>
       		
 		</ul>
@@ -316,7 +352,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/05/Untitled/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/06/容器常用指令选项/" alt="微信分享二维码">
     </div>
 </div>
 
