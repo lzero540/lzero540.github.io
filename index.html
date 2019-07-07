@@ -148,6 +148,94 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-构建JAVA环境镜像" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/07/构建JAVA环境镜像/">构建JAVA环境镜像</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/07/构建JAVA环境镜像/" class="archive-article-date">
+  	<time datetime="2019-07-07T08:45:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">FROM centos:7</span><br><span class="line">MAINTAINER zero</span><br><span class="line">ENV JAVA_HOME /usr/local/jdk1.8.0_45</span><br><span class="line">ADD jdk-8u45-linux-x64.tar.gz /usr/local</span><br><span class="line"></span><br><span class="line">ADD apache-tomcat-8.0.46.tar.gz /usr/local</span><br><span class="line">COPY server.xml /usr/local/apache-tomcat-8.0.46/conf</span><br><span class="line"></span><br><span class="line">RUN rm -f /usr/local/*.tar.gz</span><br><span class="line"></span><br><span class="line">WORKDIR /usr/local/apache-tomcat-8.0.46</span><br><span class="line">EXPOSE 8080</span><br><span class="line">ENTRYPOINT [&quot;./bin/catalina.sh&quot;, &quot;run&quot;]</span><br><span class="line"></span><br><span class="line">docker run -itd \</span><br><span class="line">--name=tomcat \</span><br><span class="line">-p 8080:8080 \</span><br><span class="line">--mount type=bind,src=/app/webapps/,dst=/usr/local/apache-tomcat-8.0.46/webapps \</span><br><span class="line">tomcat:v1</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/07/构建JAVA环境镜像/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+  
     <article id="post-Build镜像命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1016,77 +1104,10 @@
 
 
   
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/01/我的第一篇博客/">我的第一篇博客</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/01/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2019-07-01T06:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近通过B站的视频学习，尝试在<strong>GitHub</strong>上搭建个人博客</p>
-<h6 id="搭建博客的主要目的"><a href="#搭建博客的主要目的" class="headerlink" title="搭建博客的主要目的"></a>搭建博客的主要目的</h6><ol>
-<li>建立自己的个人知识库</li>
-<li>分享自己踩过的坑，和埋坑过程</li>
-<li>留下自己的学习印记</li>
-<li>学习交流</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/01/我的第一篇博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
